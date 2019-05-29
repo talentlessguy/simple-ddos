@@ -12,25 +12,9 @@ yarn add simple-ddos
 
 ## Usage
 
-### *One thread*
-
-The function takes four arguments: host, amount of requests and interval.
-
 ```js
 const ddos = require('simple-ddos')
 
-ddos(5) // Launches 5 threads
-// Makes 100 requests every 0.7 seconds
+// Launches 10 threads of sending 100 requests every 1.5s
+ddos(10, 'http://localhost', 100, 1500)
 ```
-
-### *Multiple threads*
-
-Only has one argument - the number of threads.
-
-```js
-require('./main')(5)
-```
-
-## TODO
-
-- [ ] Add clusters for multiple process running
