@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/talentlessguy/simple-ddos"
+  },
   "dependencies": {
+    "chalk": "^2.4.2",
     "request": "^2.88.0"
   }
 }

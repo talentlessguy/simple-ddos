@@ -2,19 +2,33 @@
 
 ## Description
 
-P.S It is a DoS tool, DDoS is a clickbait :)
+SimpleDDoS is a tiny Denial Of Service tool with multi-threading support for pentesting local hosted servers.
 
-SimpleDDoS is a tiny (544 bytes) Denial Of Service tool for pentesting local hosted servers.
+## Installation
+
+```sh
+yarn add simple-ddos
+```
 
 ## Usage
 
-The function takes three arguments: url, amount of requests and interval.
+### *One thread*
 
-One-liner:
+The function takes four arguments: host, amount of requests and interval.
 
 ```js
-require('simple-ddos')('http://localhost', 100, 700)
+const ddos = require('simple-ddos')
+
+ddos(5) // Launches 5 threads
 // Makes 100 requests every 0.7 seconds
+```
+
+### *Multiple threads*
+
+Only has one argument - the number of threads.
+
+```js
+require('./main')(5)
 ```
 
 ## TODO
