@@ -1,8 +1,10 @@
-# SimpleDDoS
+# 💀 SimpleDDoS
 
 ## Description
 
-SimpleDDoS is a tiny Denial Of Service tool with multi-threading support for pentesting local hosted servers.
+SimpleDDoS is a tiny Denial Of Service module with multi-threading support for pentesting local hosted servers.
+
+### Don't run it on WSL! It has some network limitations and may break your device! Better test it on VM or real OS
 
 ## Installation
 
