@@ -1,5 +1,10 @@
 # 💀 SimpleDDoS
 
+![Twitter](https://img.shields.io/twitter/follow/v1rtl.svg?label=twitter&style=flat-square)
+![David](https://img.shields.io/david/talentlessguy/simple-ddos.svg?style=flat-square)
+![Top lang](https://img.shields.io/github/languages/top/talentlessguy/simple-ddos.svg?style=flat-square)
+![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/simple-ddos.svg?style=flat-square)
+
 ## Description
 
 SimpleDDoS is a tiny Denial Of Service module with multi-threading support for pentesting local hosted servers.
