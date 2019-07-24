@@ -1,23 +1,35 @@
 # 💀 SimpleDDoS
 
-![Twitter](https://img.shields.io/twitter/follow/v1rtl.svg?label=twitter&style=flat-square)
+[![Twitter](https://img.shields.io/twitter/follow/v1rtl.svg?label=twitter&style=flat-square)](https://twitter.com/v1rtl)
 ![David](https://img.shields.io/david/talentlessguy/simple-ddos.svg?style=flat-square)
 ![Top lang](https://img.shields.io/github/languages/top/talentlessguy/simple-ddos.svg?style=flat-square)
 ![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/simple-ddos.svg?style=flat-square)
+![npm](https://img.shields.io/npm/dt/simple-ddos.svg?style=flat-square)
 
 ## Description
 
-SimpleDDoS is a tiny Denial Of Service module with multi-threading support for pentesting local hosted servers.
+SimpleDDoS is a tiny Denial Of Service module with multi-threading support using `cluster` for testing localhost servers.
 
-### Don't run it on WSL! It has some network limitations and may break your device! Better test it on VM or real OS
+Author of the module is not responsible for any illegal actions. This module was written for testing purposes.
+
+## Known issues
+
+* Doesn't work on WSL with a high number of requests
 
 ## Installation
 
 ```sh
+# yarn
 yarn add simple-ddos
+# npm
+npm i simple-ddos
 ```
 
 ## Usage
+
+### `ddos(threadsCount, host, requestCount, interval)`
+
+The module launches a list of threads and sends a lot of requests to some host with some interval.
 
 ```js
 const ddos = require('simple-ddos')
