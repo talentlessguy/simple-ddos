@@ -1,8 +1,9 @@
 {
   "name": "simple-ddos",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "bin": "bin/simple-ddos",
   "main": "index.js",
+  "description": "SimpleDDoS is a tiny Denial Of Service module with multi-threading support using `cluster`.",
   "license": "MIT",
   "repository": {
     "type": "git",
