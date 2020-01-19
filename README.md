@@ -8,7 +8,7 @@
 
 ## Description
 
-SimpleDDoS is a tiny Denial Of Service module with multi-threading support using `cluster` for testing localhost servers.
+SimpleDDoS is a tiny Denial Of Service module with multi-threading support using `cluster`.
 
 Author of the module is not responsible for any illegal actions. This module was written for testing purposes.
 
