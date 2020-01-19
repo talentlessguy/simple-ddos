@@ -1,5 +1,0 @@
-#!/usr/bin/env node
-
-const ddos = require('../index')
-
-ddos(10, 'http://localhost', 100, 1500)

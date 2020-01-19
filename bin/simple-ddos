@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+const ddos = require('../index')
+
+const { argv } = process
+
+let args = argv.slice(2, argv.length)
+
+ddos(...args)

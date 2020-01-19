@@ -14,18 +14,25 @@ Author of the module is not responsible for any illegal actions. This module was
 
 ## Known issues
 
-* Doesn't work on WSL with a high number of requests
+- Doesn't work on WSL with a high number of requests
 
 ## Installation
 
 ```sh
 # yarn
-yarn add simple-ddos
+yarn global add simple-ddos
 # npm
-npm i simple-ddos
+npm i -g simple-ddos
 ```
 
 ## Usage
+
+### CLI
+
+```
+# Launches 10 threads of sending 100 requests every 1.5s
+simple-ddos 10 http://localhost 100 1500
+```
 
 ### `ddos(threadsCount, host, requestCount, interval)`
 
