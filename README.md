@@ -1,4 +1,4 @@
-# 💀 SimpleDDoS
+# SimpleDDoS
 
 ![David](https://img.shields.io/david/talentlessguy/simple-ddos.svg?style=flat-square)
 ![Top lang](https://img.shields.io/github/languages/top/talentlessguy/simple-ddos.svg?style=flat-square)
