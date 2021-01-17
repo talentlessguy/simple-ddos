@@ -1,7 +1,5 @@
 # SimpleDDoS
 
-![David](https://img.shields.io/david/talentlessguy/simple-ddos.svg?style=flat-square)
-![Top lang](https://img.shields.io/github/languages/top/talentlessguy/simple-ddos.svg?style=flat-square)
 ![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/simple-ddos.svg?style=flat-square)
 ![npm](https://img.shields.io/npm/dt/simple-ddos.svg?style=flat-square)
 
