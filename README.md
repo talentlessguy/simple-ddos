@@ -1,4 +1,4 @@
-# SimpleDDoS
+# simple-ddos
 
 ![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/simple-ddos.svg?style=flat-square)
 ![npm](https://img.shields.io/npm/dt/simple-ddos.svg?style=flat-square)
@@ -16,10 +16,7 @@ Author of the module is not responsible for any illegal actions. This module was
 ## Installation
 
 ```sh
-# yarn
-yarn global add simple-ddos
-# npm
-npm i -g simple-ddos
+pnpm i simple-ddos
 ```
 
 ## Usage
