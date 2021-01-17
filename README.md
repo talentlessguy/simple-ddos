@@ -30,7 +30,7 @@ npm i -g simple-ddos
 
 ```
 # Launches 10 threads of sending 100 requests every 1.5s
-simple-ddos 10 http://localhost 100 1500
+simple-ddos 10 http://localhost:3000 100 1500
 ```
 
 ### `ddos(threadsCount, host, requestCount, interval)`
@@ -41,5 +41,5 @@ The module launches a list of threads and sends a lot of requests to some host w
 const ddos = require('simple-ddos')
 
 // Launches 10 threads of sending 100 requests every 1.5s
-ddos(10, 'http://localhost', 100, 1500)
+ddos(10, 'http://localhost:3000', 100, 1500)
 ```
