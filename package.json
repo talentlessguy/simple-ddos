@@ -1,6 +1,6 @@
 {
   "name": "simple-ddos",
-  "version": "2.0.0",
+  "version": "2.0.3",
   "description": "tiny Denial Of Service module with multi-threading support using `cluster`.",
   "dependencies": {
     "cfonts": "^2.9.1",
@@ -27,14 +27,14 @@
   "engines": {
     "node": ">=12.4"
   },
-  "bin": "./bin/simple-ddos",
+  "bin": "./simple-ddos",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/talentlessguy/simple-ddos.git"
   },
   "files": [
     "./*.js",
-    "bin/simple-ddos"
+    "simple-ddos"
   ],
   "keywords": [
     "security",
