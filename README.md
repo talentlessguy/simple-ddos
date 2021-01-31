@@ -7,7 +7,7 @@
 
 SimpleDDoS is a tiny Denial Of Service module with multi-threading support using `cluster`.
 
-Author of the module is not responsible for any illegal actions. This module was written for testing purposes.
+Author of the module is not responsible for any illegal actions. This module was written for testing and educational purposes.
 
 ## Known issues
 
@@ -37,8 +37,6 @@ simple-ddos 10 http://localhost:3000 100 1500
 ### API
 
 #### `ddos(threadsCount, host, requestCount, interval)`
-
-The module launches a list of threads and sends a lot of requests to some host with some interval.
 
 ```js
 import { simpleDDoS } from 'simple-ddos'
