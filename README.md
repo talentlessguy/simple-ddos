@@ -23,18 +23,26 @@ pnpm i simple-ddos
 
 ### CLI
 
+```sh
+simple-ddos <threads> <url> <request count> <interval>
+```
+
+### Example
+
 ```
 # Launches 10 threads of sending 100 requests every 1.5s
 simple-ddos 10 http://localhost:3000 100 1500
 ```
 
-### `ddos(threadsCount, host, requestCount, interval)`
+### API
+
+#### `ddos(threadsCount, host, requestCount, interval)`
 
 The module launches a list of threads and sends a lot of requests to some host with some interval.
 
 ```js
-const ddos = require('simple-ddos')
+import { simpleDDoS } from 'simple-ddos'
 
 // Launches 10 threads of sending 100 requests every 1.5s
-ddos(10, 'http://localhost:3000', 100, 1500)
+simpleDDoS(10, 'http://localhost:3000', 100, 1500)
 ```

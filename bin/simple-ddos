@@ -1,9 +1,3 @@
-#!/usr/bin/env node
+#!/usr/bin/sh
 
-const ddos = require('../index')
-
-const { argv } = process
-
-let args = argv.slice(2, argv.length)
-
-ddos(...args)
+node $PWD/cli.js "$@"

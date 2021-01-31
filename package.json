@@ -1,19 +1,54 @@
 {
   "name": "simple-ddos",
-  "version": "1.0.2",
-  "bin": "bin/simple-ddos",
-  "main": "index.js",
-  "description": "SimpleDDoS is a tiny Denial Of Service module with multi-threading support using `cluster`.",
-  "license": "MIT",
+  "version": "2.0.0",
+  "description": "tiny Denial Of Service module with multi-threading support using `cluster`.",
+  "dependencies": {
+    "cfonts": "^2.9.1",
+    "colorette": "^1.2.1",
+    "mime-types": "^2.1.28",
+    "node-fetch": "^2.6.1"
+  },
+  "type": "module",
+  "module": "index.js",
+  "exports": {
+    ".": {
+      "import": "./index.js"
+    },
+    "./cli": {
+      "import": "./cli.js"
+    },
+    "./worker": {
+      "import": "./worker.js"
+    },
+    "./package.json": {
+      "import": "./package.json"
+    }
+  },
+  "engines": {
+    "node": ">=12.4"
+  },
+  "bin": "./bin/simple-ddos",
   "repository": {
     "type": "git",
-    "url": "https://github.com/talentlessguy/simple-ddos"
+    "url": "git+https://github.com/talentlessguy/simple-ddos.git"
   },
-  "dependencies": {
-    "chalk": "^2.4.2",
-    "request": "^2.88.0"
+  "files": [
+    "./*.js",
+    "bin/simple-ddos"
+  ],
+  "keywords": [
+    "security",
+    "ddos",
+    "hacking"
+  ],
+  "author": "v1rtl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/talentlessguy/simple-ddos/issues"
   },
-  "directories": {
-    "example": "demo"
+  "homepage": "https://github.com/talentlessguy/simple-ddos#readme",
+  "devDependencies": {
+    "@types/node": "^14.14.22",
+    "@types/node-fetch": "^2.5.8"
   }
 }

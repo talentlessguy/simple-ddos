@@ -1,32 +1,37 @@
-const { log } = console,
-  { argv } = process
+import { red, blue } from 'colorette'
+import fetch from 'node-fetch'
 
-const { red, blue } = require('chalk')
+// Count errors & successful requests
+let errors = 0,
+  success = 0,
+  errorMessages = []
 
-const worker = (host, amount, interval) => {
-  // Count errors & successful requests
-  this.errors = 0
-  this.success = 0
-  this.errorMessages = []
-
+function worker(host, amount, interval) {
   // Send requests with interval
   setInterval(() => {
     for (let i = 0; i < amount; i++) {
-      require('request')(host, err => {
-        if (err) {
-          if (!this.errorMessages.includes(err.code)) {
-            this.errorMessages.push(err.code)
-            log(`Error: ${red(err)}`)
+      let isFailedRequest = false
+
+      fetch(host)
+        .catch((err) => {
+          if (err) {
+            if (!errorMessages.includes(err.code)) {
+              errorMessages.push(err.code)
+              console.log(`Error: ${red(err)}`)
+            }
+            isFailedRequest = true
+            errors++
           }
-          this.errors++
-        } else {
-          this.success++
-        }
-      })
+        })
+        .then(() => {
+          if (!isFailedRequest) {
+            success++
+          }
+          isFailedRequest = false
+        })
     }
-    log(`Errors: ${red(this.errors)} Success: ${blue(this.success)}`)
-    this.errors = this.success = 0
+    console.log(`Errors: ${red(errors)} Success: ${blue(success)}`)
   }, interval)
 }
 
-worker(argv[2], argv[3], argv[4])
+worker(process.argv[2], process.argv[3], process.argv[4])

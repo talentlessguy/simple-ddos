@@ -1,12 +1,10 @@
-const cluster = require('cluster'),
-  { log } = console
+import cluster from 'cluster'
+import { red, cyan, blue } from 'colorette'
 
-const { red } = require('chalk')
-
-module.exports = (threads = 5, host = 'http://localhost:3000', amount = 1000, interval = 1000) => {
+export const simpleDDoS = (threads = 5, host = 'http://localhost:3000', amount = 1000, interval = 1000) => {
   // Spawn main process
   cluster.setupMaster({
-    exec: `${__dirname}/worker.js`,
+    exec: `${process.cwd()}/worker.js`,
     args: [host, amount, interval]
   })
 
@@ -15,15 +13,17 @@ module.exports = (threads = 5, host = 'http://localhost:3000', amount = 1000, in
 
   for (let i = 0; i < threads; i++) {
     cluster.fork()
+
     threadsCount++
   }
 
-  log(`Running DDoS in ${threadsCount} threads`)
-
-  cluster.on('exit', (worker, code, signal) =>
-    log(
-      red(`
+  cluster.on(
+    'exit',
+    (worker, code, signal) =>
+      void code !== 0 &&
+      console.log(
+        red(`
 Worker ${worker.process.pid} died. Before the death he said ${signal}.`)
-    )
+      )
   )
 }

@@ -1,3 +1,3 @@
-const ddos = require('../index')
+import { simpleDDoS } from '../index.js'
 
-ddos(10, 'http://localhost:3000', 100, 1500)
+simpleDDoS(10, 'http://localhost:3000', 100, 1500)
