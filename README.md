@@ -1,6 +1,7 @@
+# UNMAINTAINED AND UNPUBLISHED
+
 # simple-ddos
 
-![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/simple-ddos.svg?style=flat-square)
 ![npm](https://img.shields.io/npm/dt/simple-ddos.svg?style=flat-square)
 
 ```
